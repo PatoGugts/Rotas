@@ -1,0 +1,14 @@
+<h2>Cadastrar</h2>
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+  <label for="name">Nome:</label>
+  <input type="text" id="name" name="name" ngModel required>
+  <br>
+  <label for="password">Senha:</label>
+  <input type="password" id="password" name="password" ngModel required minlength="6" maxlength="20">
+  <br>
+  <label for="confirmPassword">Confirmação de Senha:</label>
+  <input type="password" id="confirmPassword" name="confirmPassword" ngModel required minlength="6" maxlength="20">
+  <br>
+  <button type="submit">Enviar</button>
+</form>
+<div *ngIf="message">{{ message }}</div>
